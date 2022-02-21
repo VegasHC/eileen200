@@ -225,6 +225,7 @@ sections:
           type: terms
           icon: taxonomy
           listable: hidden
+          max_items: 1
       -
         handle: services
         field:
