@@ -18,11 +18,11 @@
 </div>
 
 <nav id="mobile-nav" class="absolute flex flex-col hidden w-full p-4 mx-auto space-y-2 lg:hidden bg bg-secondary">
-    {{ nav:main_nav }}
+    {{ nav:main }}
         <a href="{{ url }}" class="flex-grow text-lg font-bold text-center text-white hover:text-brand">
             {{ title }}
         </a>
-    {{ /nav:main_nav }}
+    {{ /nav:main }}
 </nav>
 
 <div class="p-3 text-center text-primary">
@@ -38,11 +38,11 @@
 <div class="mx-auto border-b lg:py-2 border-gray">
     <div class="container px-2 mx-auto lg:px-0 ">
         <nav class="flex-col hidden w-3/5 mx-auto divide-x-2 lg:flex lg:flex-row">
-            {{ nav:main_nav }}
+            {{ nav:main }}
                 <a href="{{ url }}" class="flex-grow font-bold text-center text-primary hover:text-brand">
                     {{ title }}
                 </a>
-            {{ /nav:main_nav }}
+            {{ /nav:main }}
         </nav>
     </div>
 </div>
