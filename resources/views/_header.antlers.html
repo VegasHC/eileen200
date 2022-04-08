@@ -1,101 +1,48 @@
-
-
-
-
-<div id="masthead" class="lg:bg-cover bg-no-repeat relative">
-
-
+<div id="masthead" class="relative bg-no-repeat lg:bg-cover">
     <div class="float-right mt-8 mr-2 lg:hidden" id="mobile-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="#fff">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="#fff">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
     </div>
 
-    <div class=" py-4">
-
-
-            <div class="flex-shrink-0 flex mr-2 ">
-                {{ asset url="/assets/logos/logo-text.png" }}
+    <div class="py-4 ">
+        <div class="flex flex-shrink-0 mr-2 ">
+            {{ asset url="/assets/logos/logo-text.png" }}
                 <a href="/">
-
-                    <img class="block lg:hidden h-20 w-auto" src="{{ url }}" alt="{{ alt }}">
-                    <img class="hidden lg:block h-44 mb-20 w-auto" src="{{ url }}" alt="{{ alt }}">
+                    <img class="block w-auto h-20 lg:hidden" src="{{ url }}" alt="{{ alt }}">
+                    <img class="hidden w-auto mb-20 lg:block h-44" src="{{ url }}" alt="{{ alt }}">
                 </a>
-                {{ /asset }}
-
-
-
-            </div>
-
+            {{ /asset }}
+        </div>
     </div>
-
-
-
-
-
-
-
 </div>
 
-<nav id="mobile-nav" class="hidden absolute p-4 flex flex-col lg:hidden w-full bg bg-secondary mx-auto space-y-2">
-
-
+<nav id="mobile-nav" class="absolute flex flex-col hidden w-full p-4 mx-auto space-y-2 lg:hidden bg bg-secondary">
     {{ nav:main_nav }}
-
-    <a href="{{ url }}" class=" flex-grow text-white  text-lg font-bold text-center hover:text-brand">
-        {{ title }}
-    </a>
+        <a href="{{ url }}" class="flex-grow text-lg font-bold text-center text-white hover:text-brand">
+            {{ title }}
+        </a>
     {{ /nav:main_nav }}
-
-
 </nav>
 
-
-
-
-
-
-<div class="text-primary text-center p-3">
-
-
-
-    <span class="font-bold px-1 tracking-wide text-sm lg:text-lg inline">
+<div class="p-3 text-center text-primary">
+    <span class="inline px-1 text-sm font-bold tracking-wide lg:text-lg">
         Bringing the Community Back to Healthcare
     </span>
     <br class="lg:hidden">
-    <span class="px-1 italic inline text-sm ">
-        Your One‐Stop Resource for <br class="lg:hidden">All Things Medical In Las Vegas!
+    <span class="inline px-1 text-sm italic ">
+        Your One Stop Resource for <br class="lg:hidden">All Things Medical In Las Vegas!
     </span>
-
-
-
-
 </div>
 
-
-
-<div class=" mx-auto lg:py-2  border-b  border-gray">
-
-
-    <div class="container mx-auto px-2 lg:px-0 ">
-
-
-        <nav class="hidden lg:flex flex-col lg:flex-row divide-x-2 w-3/5 mx-auto">
-
-
+<div class="mx-auto border-b lg:py-2 border-gray">
+    <div class="container px-2 mx-auto lg:px-0 ">
+        <nav class="flex-col hidden w-3/5 mx-auto divide-x-2 lg:flex lg:flex-row">
             {{ nav:main_nav }}
-
-            <a href="{{ url }}" class=" flex-grow text-primary  font-bold text-center hover:text-brand">
-                {{ title }}
-            </a>
+                <a href="{{ url }}" class="flex-grow font-bold text-center text-primary hover:text-brand">
+                    {{ title }}
+                </a>
             {{ /nav:main_nav }}
-
-
         </nav>
-
-
-
-
-
     </div>
 </div>
