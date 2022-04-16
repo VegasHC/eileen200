@@ -56,6 +56,7 @@ content_admin:
     - 'edit other authors zip_codes entries'
     - 'publish other authors zip_codes entries'
     - 'delete other authors zip_codes entries'
+    - 'configure navs'
     - 'view footer nav'
     - 'edit footer nav'
     - 'view main nav'
