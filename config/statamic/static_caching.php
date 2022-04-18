@@ -71,48 +71,7 @@ return [
     */
 
     'invalidation' => [
-
-        'class' => null,
-
-        'rules' => [
-            'collections' => [
-                'articles' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-                'providers' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-                'service_categories' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-                'ads' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-            ],
-            'globals' => [
-                'settings' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-            ],
-            'taxonomies' => [
-                'services' => [
-                    'urls' => [
-                        '/*',
-                    ],
-                ],
-            ],
-        ],
-
+        'rules' => 'all',
     ],
 
 ];
