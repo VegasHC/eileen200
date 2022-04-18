@@ -2,8 +2,6 @@ tree:
   -
     entry: home
   -
-    entry: a5763aff-2bc7-4fdc-9dcd-94018bc25ae7
-  -
     entry: a0d2bbb3-706e-4242-a664-54ea8c04cae7
   -
     entry: c3aa4296-b6a4-42f1-9f98-aa0e132a5aab
@@ -17,3 +15,5 @@ tree:
     entry: 00e94db0-c846-47ae-9be0-e0704e5fc205
   -
     entry: a6e632cf-a410-4b39-ad4e-91f650469313
+  -
+    entry: a5763aff-2bc7-4fdc-9dcd-94018bc25ae7
