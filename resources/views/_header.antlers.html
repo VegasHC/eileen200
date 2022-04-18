@@ -29,10 +29,12 @@
     <span class="inline px-1 text-sm font-bold tracking-wide lg:text-lg">
         {{ header:main_text }}
     </span>
-    <br class="lg:hidden">
-    <span class="inline px-1 text-sm italic ">
-        {{ header:secondary_text }}
-    </span>
+    {{ if header:secondary_text }}
+        <br class="lg:hidden">
+        <span class="inline px-1 text-sm italic ">
+            {{ header:secondary_text }}
+        </span>
+    {{ /if }}
 </div>
 
 <div class="mx-auto border-b lg:py-2 border-gray">
