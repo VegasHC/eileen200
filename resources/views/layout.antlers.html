@@ -18,18 +18,6 @@
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9G7H8WNF8"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-K9G7H8WNF8');
-        </script>
-
-
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,6 +28,24 @@
             const algolia_search_apikey = '{{ config:services.algolia.search_key }}';
         </script>
         <script src="//unpkg.com/alpinejs" defer></script>
+
+        <script defer data-domain="{{ config:app:domain }}" src="https://plausible.io/js/plausible.manual.js"></script>
+        <!-- define the `plausible` function to manually trigger events -->
+        <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+        <!-- trigger pageview -->
+        <script>
+            function prepareUrl(params) {
+                const url = new URL(location.href)
+                const queryParams = new URLSearchParams(location.search)
+                let customUrl = url.protocol + "//" + url.hostname + url.pathname
+                for (const paramName of params) {
+                    const paramValue = queryParams.get(paramName)
+                    if (paramValue) customUrl = customUrl + '/' + paramValue
+                }
+                return customUrl
+            }
+            plausible('pageview', { u: prepareUrl(["providers[query]", "providers[refinementList][services][0]"]) })
+        </script>
     </head>
     <body class="font-sans leading-normal text-grey-800 theme-default">
         {{ partial:header }}
